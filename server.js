@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 // Routes
 const homeRoutes = require("./routes/home");
+const todoRoutes = require("./routes/todos");
 const connectDB = require("./config/database");
 connectDB();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // Separating different rotes.
 app.use("/", homeRoutes);
+app.use("/todos", todoRoutes);
 
 app.listen(process.env.PORT || 2022, () => {
   console.log("Server is running on port: ", process.env.PORT || 2022);
