@@ -1,3 +1,5 @@
+// https://github.com/sahat/hackathon-starter/blob/master/config/passport.js  source example
+
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = require("../models/User");
